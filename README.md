@@ -43,28 +43,30 @@ python -m uvicorn main:app --reload
 ```
 Open the localhost (8000 possibly)
 
-**6. Demonstrate Postman and Pytest**
-*6.1 Testing with Postman*
-1. Create a User:
-  1. Open Postman.
-  2. Create a new HTTP request.
-  3. Select POST.
-  4. Enter http://localhost:8000/users.
-  5. Select Body → raw → JSON.
-  6. Enter the example JSON request: ```{"name": "Alice", "email": "alice@demo.com"}```
-  7. Click Send.
-  8. Verify that the response status is 201 Created.
-  9. Record the returned user ID.
-2. Retrieve a User:
-  1. Create another request.
-  2. Select GET.
-  3. Enter http://localhost:8000/users/{user_id}.
-  4. Replace {user_id} with the ID returned by the POST request.
-  5. Click Send.
-  6. Verify that the saved name and email are returned.
-3. Retrieve all users: `GET http://localhost:8000/users`
+## 6. Demonstrate Postman and Pytest
+**6.1 Testing with Postman**
+A: Create a User:
+1. Open Postman.
+2. Create a new HTTP request.
+3. Select POST.
+4. Enter http://localhost:8000/users.
+5. Select Body → raw → JSON.
+6. Enter the example JSON request: ```{"name": "Alice", "email": "alice@demo.com"}```
+7. Click Send.
+8. Verify that the response status is 201 Created.
+9. Record the returned user ID.
 
-*6.2 Testing with Pytest*
+B: Retrieve a User:
+1. Create another request.
+2. Select GET.
+3. Enter http://localhost:8000/users/{user_id}.
+4. Replace {user_id} with the ID returned by the POST request.
+5. Click Send.
+6. Verify that the saved name and email are returned.
+
+C: Retrieve all users: `GET http://localhost:8000/users`
+
+**6.2 Testing with Pytest**
 Run `python -m pytest -v`.
 
 You can also verify the Postman data using Pytest, and demonstrate shared database, if you have time.
