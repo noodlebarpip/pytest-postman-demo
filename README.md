@@ -7,6 +7,7 @@ cd pytest-postman-demo
 ```
 
 **2. Create a virtual environment**
+
 For Windows:
 ```
 py -m venv .venv
@@ -31,12 +32,14 @@ python -c "import fastapi, pydantic, pytest, requests; print('All dependencies i
 ```
 
 **4. Configure VSCode (if there are problem with imports)**
+
 1. Open Command Palette (Cmd/Ctrl + Shift + P)
 2. Select `Python: Select Interpreter`
 3. Choose the Python interpreter inside `.venv`
 4. If imports are still underlined, run `Developer: Reload Window`.
 
 **5. Run the Backend**
+
 Start the FastAPI server:
 ```
 python -m uvicorn main:app --reload
@@ -44,7 +47,9 @@ python -m uvicorn main:app --reload
 Open the localhost (8000 possibly)
 
 ## 6. Demonstrate Postman and Pytest
+
 **6.1 Testing with Postman**
+
 A: Create a User:
 1. Open Postman.
 2. Create a new HTTP request.
